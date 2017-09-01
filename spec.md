@@ -40,5 +40,11 @@ Ticketing System
 ### Admin
 - can do and see all
 
+### Models
+- Users
+- Tickets
+- KnowledgeBase
 
+### Roles
+Undecided on CanCanCan or Pundit. Leaning more towards Pundit
 
