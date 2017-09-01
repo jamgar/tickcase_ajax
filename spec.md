@@ -22,3 +22,23 @@ Confirm:
 - [ ] Limited logic in controllers
 - [ ] Views use helper methods if appropriate
 - [ ] Views use partials if appropriate
+
+## Notes for Tickcase:
+
+Ticketing System
+
+### Client
+- can login to create, read, update, destroy (aka. close) a their tickets
+- can build a profile
+
+### Technician
+- can login to create, read, update, destroy (aka. close) tickets
+- can build a profile
+- can assign tickets
+- can create a knowlegebase article
+
+### Admin
+- can do and see all
+
+
+
