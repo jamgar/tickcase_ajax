@@ -28,7 +28,10 @@ gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 
+gem 'jquery-rails'
 gem 'devise'
+gem 'bootstrap-sass', '~> 3.3.6'
+gem 'bootswatch-rails'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
