@@ -27,22 +27,24 @@ Confirm:
 
 Ticketing System
 
-### Client
+### User - Client
 - can login to create, read, update, destroy (aka. close) a their tickets
 - can build a profile
 
-### Technician
+### User - Technician
 - can login to create, read, update, destroy (aka. close) tickets
 - can build a profile
 - can assign tickets
 - can create a knowlegebase article
 
-### Admin
+### User -  Admin
 - can do and see all
 
 ### Models
 - Users
-- Tickets
+- Tickets - id, client_id, technician_id, subject, status[open, in progess,
+  pending, closed], timestamp,
+- Ticket_Thread
 - KnowledgeBase
 
 ### Roles
