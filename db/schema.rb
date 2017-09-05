@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170903223106) do
+ActiveRecord::Schema.define(version: 20170904220856) do
 
   create_table "tickets", force: :cascade do |t|
     t.string "subject"
     t.integer "status", default: 0
-    t.string "client_id"
-    t.string "technician_id"
+    t.integer "client_id"
+    t.integer "technician_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.text "content"
@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(version: 20170903223106) do
     t.string "last_sign_in_ip"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "role"
+    t.integer "role", default: 0
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

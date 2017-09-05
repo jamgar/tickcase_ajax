@@ -1,9 +1,15 @@
 class Ticket < ApplicationRecord
-  belongs_to :client_id, class_name: 'User'
-  belongs_to :technician_id, class_name: 'User'
+  belongs_to :client, class_name: 'User'
+  belongs_to :technician, class_name: 'User'
 
-  enum status: [:open, :in_progress, :pending, :closed]
+  enum status: {
+    open: 0,
+    in_progress: 1,
+    pending: 2,
+    closed: 3
+  }
 
   validates :subject, presence: true
+  validates :content, presence: true
 
 end

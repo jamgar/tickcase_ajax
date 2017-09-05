@@ -1,0 +1,10 @@
+<div class="container">
+  <h3>Subject: <%= @ticket.subject %></h3>
+  <hr/>
+  <p>Ticket# <%= @ticket.id %></p>
+  <p>Status: <%= @ticket.status %></p>
+  <p>Technician: <%= @ticket.technician.email %></p>
+  <p>Content:<br/>
+    <%= @ticket.content %>
+  </p>
+</div>

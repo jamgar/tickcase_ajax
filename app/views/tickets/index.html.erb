@@ -1,0 +1,26 @@
+<div class="container">
+  <h1>Tickets</h1>
+
+  <div class="table-responsive">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Ticket No.</th>
+          <th>Subject</th>
+          <th>Status</th>
+          <th>Technician</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @tickets.each do |ticket| %>
+        <tr>
+          <td><%= ticket.id %></td>
+          <td><%= ticket.subject %></td>
+          <td><%= ticket.status %></td>
+          <td><%= ticket.technician.email %>
+        </tr>
+      <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
