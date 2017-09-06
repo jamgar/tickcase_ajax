@@ -18,13 +18,31 @@ class TicketsController < ApplicationController
     @ticket.client = current_user
     @ticket.technician = current_user
     if @ticket.save
-      flash[:notice] = "Your ticket was created successfully!"
+      flash[:notice] = "Ticket was successfully created!"
       redirect_to @ticket
     else
-      flash[:alert] = "Your ticket was not created!"
-
+      flash[:alert] = "Ticket was not created!"
       render :new
     end
+  end
+
+  def edit
+  end
+
+  def update
+    if @ticket.update(ticket_params)
+      flash[:notice] = "Ticket was successfully updated!"
+      redirect_to @ticket
+    else
+      flash[:alert] = "Ticket was not updated!"
+      render :edit
+    end
+  end
+
+  def destroy
+    # Admin should only be the ones allowed to delete a ticket
+    @ticket.destroy
+    redirect_to root_path
   end
 
   private
