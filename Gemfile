@@ -32,6 +32,8 @@ gem 'jquery-rails'
 gem 'devise'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'bootswatch-rails'
+gem 'dotenv-rails'
+gem 'omniauth-google-oauth2'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
