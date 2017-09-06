@@ -2,6 +2,8 @@ class Ticket < ApplicationRecord
   belongs_to :client, class_name: 'User'
   belongs_to :technician, class_name: 'User'
 
+  has_many :ticket_messages
+
   enum status: {
     open: 0,
     in_progress: 1,

@@ -11,6 +11,7 @@ class TicketsController < ApplicationController
   end
 
   def show
+    @ticket_messages = @ticket.ticket_messages
   end
 
   def create
