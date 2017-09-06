@@ -44,7 +44,7 @@ Ticketing System
 - Users
 - Tickets - id, client_id, technician_id, subject, status[open, in progess,
   pending, closed], timestamp,
-- Ticket_Thread
+- Ticket_Messages - ticket_id, content
 - KnowledgeBase
 
 ### Roles
