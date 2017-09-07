@@ -11,7 +11,7 @@ class TicketsController < ApplicationController
   end
 
   def show
-    @ticket_messages = @ticket.ticket_messages
+    @ticket_messages = @ticket.ticket_messages.order(created_at: :desc)
   end
 
   def create

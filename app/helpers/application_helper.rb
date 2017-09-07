@@ -6,4 +6,8 @@ module ApplicationHelper
        edit_user_registration_path(current_user)
      end
   end
+
+  def panel_color(user, technician)
+    user == technician ? 'default' : 'primary'
+  end
 end

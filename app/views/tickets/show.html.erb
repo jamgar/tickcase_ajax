@@ -16,6 +16,19 @@
   <%= render 'ticket_messages/message' %>
 
   <% @ticket_messages.each do |message| %>
-    <p><%= message.content %></p>
+    <div class="panel panel-<%= panel_color(message.user, @ticket.technician) %>">
+      <div class="panel-heading">
+        <p>
+        Message by: <%= message.user.email %>
+        <% if message.user == @ticket.technician %>
+           <%= link_to "<i class='fa fa-pencil-square-o'></i>".html_safe,
+             edit_ticket_path(@ticket), class: "pull-right" %>
+        <% end %>
+        </p>
+      </div>
+      <div class="panel-body">
+        <p><%= message.content %></p>
+      </div>
+    </div>
   <% end %>
 </div>
