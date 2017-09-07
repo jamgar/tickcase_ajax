@@ -12,17 +12,16 @@
   <p class="well"><%= @ticket.content %></p>
 
   <hr/>
-
-  <%= render 'ticket_messages/message' %>
+  <%= link_to "Add Message", new_ticket_ticket_message_path(@ticket), remote: true, class: "btn btn-info" %><br/><br/>
 
   <% @ticket_messages.each do |message| %>
     <div class="panel panel-<%= panel_color(message.user, @ticket.technician) %>">
       <div class="panel-heading">
         <p>
         Message by: <%= message.user.email %>
-        <% if message.user == @ticket.technician %>
+        <% if message.user == current_user %>
            <%= link_to "<i class='fa fa-pencil-square-o'></i>".html_safe,
-             edit_ticket_path(@ticket), class: "pull-right" %>
+             edit_ticket_ticket_message_path(@ticket, message), remote: true, class: "pull-right" %>
         <% end %>
         </p>
       </div>

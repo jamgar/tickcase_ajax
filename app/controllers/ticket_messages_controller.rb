@@ -16,6 +16,21 @@ class TicketMessagesController < ApplicationController
     end
   end
 
+  def edit
+    @ticket_message = @ticket.ticket_messages.find_by_id(params[:id])
+  end
+
+  def update
+    @ticket_message = @ticket.ticket_messages.find_by_id(params[:id])
+    if @ticket_message.update(message_params)
+      redirect_back(fallback_location: (request.referer || root_path),
+                    notice: "Your message was saved!")
+    else
+      redirect_back(fallback_location: (request.referer || root_path),
+                    notice: "You message was not saved!")
+    end
+  end
+
   private
     def message_params
       params.require(:ticket_message).permit(:user_id, :ticket_id, :content)
