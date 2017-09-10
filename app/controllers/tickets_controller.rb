@@ -1,9 +1,11 @@
 class TicketsController < ApplicationController
-  before_action :set_ticket, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
+  load_and_authorize_resource
+#  before_action :set_ticket, only: [:show, :edit, :update, :destroy]
 
 
   def index
-    @tickets = Ticket.all
+#    @tickets = Ticket.all
   end
 
   def new
@@ -15,7 +17,7 @@ class TicketsController < ApplicationController
   end
 
   def create
-    @ticket = Ticket.new(ticket_params)
+#    @ticket = Ticket.new(ticket_params)
     @ticket.client = current_user
     @ticket.technician = current_user
     if @ticket.save

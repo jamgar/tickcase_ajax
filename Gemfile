@@ -34,7 +34,8 @@ gem 'bootstrap-sass', '~> 3.3.6'
 gem 'bootswatch-rails'
 gem 'dotenv-rails'
 gem 'omniauth-google-oauth2'
-gem "font-awesome-rails"
+gem 'font-awesome-rails'
+gem 'cancancan'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

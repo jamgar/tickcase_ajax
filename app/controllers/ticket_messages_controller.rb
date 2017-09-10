@@ -1,5 +1,8 @@
 class TicketMessagesController < ApplicationController
-  before_action :find_message
+  before_action :authenticate_user!
+  before_action :find_message, only: [:create, :edit, :update]
+  load_and_authorize_resource
+
   def new
     @ticket_message = TicketMessage.new
   end
