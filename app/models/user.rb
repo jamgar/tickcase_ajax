@@ -15,4 +15,8 @@ class User < ApplicationRecord
       user.password = Devise.friendly_token[0,20]
     end
   end
+
+  def self.get_technician
+    where(role: :technician).limit(1)
+  end
 end
