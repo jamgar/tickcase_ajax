@@ -1,0 +1,23 @@
+<div class="container">
+  <br>
+  <%= link_to "Add User", new_user_path, class: 'btn btn-primary pull-right' if current_user.admin?%>
+  <h2>Users</h2>
+  <div class="table-responsive">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Email</th>
+          <th>Role</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @users.each do |user| %>
+        <tr>
+          <td><%= link_to user.email, user_path(user) %></td>
+          <td><%= user.role %></td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
