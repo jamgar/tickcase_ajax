@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  before_save :first_user_admin
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
@@ -19,4 +20,11 @@ class User < ApplicationRecord
   def self.get_technician
     where(role: :technician).limit(1)
   end
+
+  private
+    def first_user_admin
+      if User.all.empty?
+        self.role = :admin
+      end
+    end
 end
