@@ -41,7 +41,7 @@ class UsersController < ApplicationController
   end
 
   private
-    def needs_password(user, params)
+    def needs_password?(user, params)
       params[:password].present?
     end
 

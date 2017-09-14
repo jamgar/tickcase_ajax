@@ -46,7 +46,3 @@ Ticketing System
   pending, closed], timestamp,
 - Ticket_Messages - user_id, ticket_id, content
 - KnowledgeBase
-
-### Roles
-Undecided on CanCanCan or Pundit. Leaning more towards Pundit
-
