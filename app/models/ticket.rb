@@ -15,5 +15,6 @@ class Ticket < ApplicationRecord
   validates :content, presence: true
 
   scope :tickets_open, -> { where.not(status: :closed) }
+  scope :tickets_closed, -> { where(status: :closed) }
 
 end

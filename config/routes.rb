@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get '/about', to: "pages#about"
   get '/contact', to: "pages#contact"
   get '/secret', to: "pages#secret"
+  get '/tickets/closed', to: "tickets#closed"
 
   resources :tickets do
     resources :ticket_messages

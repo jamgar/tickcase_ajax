@@ -17,8 +17,11 @@ class TicketsController < ApplicationController
     @ticket_messages = @ticket.ticket_messages.order(created_at: :desc)
   end
 
+  def closed
+    @tickets = @tickets.tickets_closed
+  end
+
   def create
-#    @ticket = Ticket.new(ticket_params)
     @ticket.client = current_user
     @ticket.technician = User.get_technician[0]
     if @ticket.save
