@@ -2,6 +2,8 @@ example_id                                         | status | run_time        |
 -------------------------------------------------- | ------ | --------------- |
 ./spec/controllers/pages_controller_spec.rb[1:1:1] | passed | 0.00691 seconds |
 ./spec/controllers/pages_controller_spec.rb[1:2:1] | passed | 0.0819 seconds  |
-./spec/features/sign_in_user_spec.rb[1:1]          | passed | 0.03751 seconds |
-./spec/features/sign_out_user_spec.rb[1:1]         | passed | 0.04852 seconds |
-./spec/features/sign_up_users_spec.rb[1:1]         | passed | 0.31828 seconds |
+./spec/features/create_ticket_spec.rb[1:1]         | passed | 0.07222 seconds |
+./spec/features/edit_ticket_spec.rb[1:1]           | passed | 0.06716 seconds |
+./spec/features/sign_in_user_spec.rb[1:1]          | passed | 0.03061 seconds |
+./spec/features/sign_out_user_spec.rb[1:1]         | passed | 0.33776 seconds |
+./spec/features/sign_up_users_spec.rb[1:1]         | passed | 0.04145 seconds |

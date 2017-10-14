@@ -4,7 +4,7 @@
   <p><strong>
     Ticket# <%= @ticket.id %></strong>
      <%= link_to "<i class='fa fa-pencil-square-o'></i>".html_safe,
-                            edit_ticket_path(@ticket) %>
+                            edit_ticket_path(@ticket), id: "edit-ticket" %>
   </p>
   <p><strong>Status:</strong> <%= @ticket.status %></p>
   <p>Technician: <%= @ticket.technician.email %></p>

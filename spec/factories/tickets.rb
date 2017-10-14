@@ -1,8 +1,7 @@
 FactoryGirl.define do
   factory :ticket do
-    subject "MyText"
+    subject "My Ticket Title"
     status 1
-    client_id "MyString"
-    technician_id "MyString"
+    content "My Content for ticket"
   end
 end
