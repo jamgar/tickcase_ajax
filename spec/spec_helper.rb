@@ -1,5 +1,5 @@
-require_relative 'support/controller_helpers'
-require 'devise'
+# require_relative 'support/controller_helpers'
+# require 'devise'
 
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
@@ -38,10 +38,10 @@ begin
 
   Kernel.srand config.seed
 end
-  config.include ControllerHelpers, type: :controller
-  Warden.test_mode!
-
-  config.after do
-    Warden.test_reset!
-  end
+  # config.include ControllerHelpers, type: :controller
+  # Warden.test_mode!
+  #
+  # config.after do
+  #   Warden.test_reset!
+  # end
 end
