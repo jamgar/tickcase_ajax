@@ -1,5 +1,5 @@
-# require_relative 'support/controller_helpers'
-# require 'devise'
+require_relative 'support/controller_helpers'
+require 'devise'
 
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
@@ -13,6 +13,20 @@ RSpec.configure do |config|
 
     mocks.verify_partial_doubles = true
 
+  end
+
+  config.include ControllerHelpers, type: :controller
+  Warden.test_mode!
+
+  config.after do
+    Warden.test_reset!
+  end
+
+  config.include ControllerHelpers, type: :controller
+  Warden.test_mode!
+
+  config.after do
+    Warden.test_reset!
   end
 
   config.shared_context_metadata_behavior = :apply_to_host_groups
@@ -38,10 +52,4 @@ begin
 
   Kernel.srand config.seed
 end
-  # config.include ControllerHelpers, type: :controller
-  # Warden.test_mode!
-  #
-  # config.after do
-  #   Warden.test_reset!
-  # end
 end

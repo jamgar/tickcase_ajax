@@ -1,0 +1,18 @@
+require "rails_helper"
+
+RSpec.feature "Users sign-in" do
+  before do
+    @bob = User.create(email: "bob@example.com", password: "password")
+  end
+
+  scenario "with valid credentials" do
+    visit "/"
+
+    click_link "Sign In"
+    fill_in "Email", with: @bob.email
+    fill_in "Password", with: @bob.password
+    click_button "Log in"
+
+    expect(page).to have_content("Signed in successfully.")
+  end
+end
