@@ -1,6 +1,6 @@
-# Tickcase
+# Tickcase Ajax
 
-This is a simple Ticket tracking system built with Ruby on Rails.
+This is a simple Ticket tracking system built with Ruby on Rails. It is a project created for Learn.co online class. I made changes to the original app by including ajax calls.
 
 ### instructions
 * Download or Clone the repository
