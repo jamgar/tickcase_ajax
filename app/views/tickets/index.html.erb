@@ -1,4 +1,20 @@
 <div class="container">
   <h1>Tickets</h1>
-  <%= render partial: 'tickets/tickets', locals: {tickets: @tickets} %>
+  <%#= render partial: 'tickets/tickets', locals: {tickets: @tickets} %>
+  <div class="table-responsive">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Ticket No.</th>
+          <th>Subject</th>
+          <th>Status</th>
+          <th>Technician</th>
+        </tr>
+      </thead>
+      <tbody id="tickets-table">
+
+      </tbody>
+    </table>
+  </div>
+  <div id="ticket-body"></div>
 </div>

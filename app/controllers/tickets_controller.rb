@@ -1,12 +1,13 @@
 class TicketsController < ApplicationController
   before_action :authenticate_user!
   load_and_authorize_resource
-#  before_action :set_ticket, only: [:show, :edit, :update, :destroy]
-
 
   def index
-    #    @tickets = Ticket.all
     @tickets = @tickets.tickets_open
+    respond_to do |f|
+      f.html { render :index }
+      f.json { render json: @tickets}
+    end
   end
 
   def new
@@ -15,6 +16,10 @@ class TicketsController < ApplicationController
 
   def show
     @ticket_messages = @ticket.ticket_messages.order(created_at: :desc)
+    respond_to do |f|
+      f.html { render :show }
+      f.json { render json: @ticket}
+    end
   end
 
   def closed
